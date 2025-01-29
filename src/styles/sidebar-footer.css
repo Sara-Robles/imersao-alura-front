@@ -1,6 +1,11 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--bg-color);
+    font-family: var(--font-dm-sans);
+    color: var(--text-color);
+}
+
+body a, body button {
+    color: var(--text-color);
 }
 
 .sidebar {
@@ -12,20 +17,20 @@ body {
     width: 300px;
 }
 
-.sidebar_navigation {
-    background-color: #121212;
+.sidebar-navigation {
+    background-color: var(--section-bg-color);
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
 
-.sidebar_navigation .logo {
-    background-color: #121212;
+.sidebar-navigation .logo {
+    background-color: var(--section-bg-color);
     display: flex;
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
 
-.sidebar_navigation .logo img {
+.sidebar-navigation .logo img {
     width: 80px;
 }
 
@@ -39,65 +44,58 @@ body {
 }
 
 .sidebar nav ul li a {
-    color: #b3b3b3;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
 }
 
 .library {
-    background-color: #121212;
+    background-color: var(--section-bg-color);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding: 4px 8px;
-    color: #b3b3b3;
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.library .library_content {
+.library .library-content {
     display: flex;
     justify-content: space-between;
 }
 
-.library .library_button {
+.library .library-button {
     display: flex;
     margin-right: 10px;
-    color: #b3b3b3;
     background-color: transparent;
     border: 0px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-align: center;
     text-decoration: none;
     text-transform: none;
     padding: 20px 10px;
 }
 
-.library .library_button .fa {
+.library .library-button .fa {
     font-size: 20px;
     font-weight: 300;
-    color: #b3b3b3;
     margin-right: 10px;
     padding-right: 8px;
 }
 
-.library .library_content .fa-plus {
+.library .library-content .fa-plus {
     margin: 24px 10px;
 }
 
-.section_playlist {
+.section-playlist {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-    background-color: #242424;
-    color: #b3b3b3;
+    background-color: var(--secondary-color);
     font-weight: 600;
     font-size: 14px;
     margin: 8px 0;
@@ -105,41 +103,40 @@ body {
     border-radius: 10px;
 }
 
-.section_playlist .section_playlist_content {
+.section-playlist .section-playlist-content {
     display: flex;
     flex-direction: column;   
 }
 
-.section_playlist_content .text {
+.section-playlist-content .text {
     padding-bottom: 14px;
-    color: #fff;
-    font-family: "DM Sans", sans-serif;
+    color: var(--primary-color);
 }
 
-.section_playlist_content .title {
+.section-playlist-content .title {
     font-weight: 700;
 }
 
-.section_playlist_content .subtitle {
+.section-playlist-content .subtitle {
     font-weight: 500;
     font-size: 12px;
 }
 
-.section_playlist_content .section_playlist_button {
+.section-playlist-content .section-playlist-button {
     display: flex;
     justify-content: center;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-decoration: none;
     text-transform: none;
     padding: 10px;
     margin-top: 12px;
     border: 0;
     width: 113px;
+    cursor: pointer;
 }
 
 .sidebar .cookies {
@@ -147,7 +144,6 @@ body {
 }
 
 .sidebar .cookies a {
-    color: #b3b3b3;
     font-weight: 500;
     font-size: 10px;
     text-decoration: none;
@@ -157,12 +153,12 @@ body {
     text-decoration: underline;
 }
 
-.languages .languages_button {
+.languages .languages-button {
     align-items: center;
     background-color: transparent;
     border: 1px solid #878787;
     border-radius: 20px;
-    color: #fff;
+    color: var(--primary-color);
     font-weight: bold;
     cursor: pointer;
     width: 170px;
@@ -170,7 +166,7 @@ body {
     padding: 8px;
 }
 
-.footer {
+.disclaimer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -184,45 +180,38 @@ body {
     height: 45px;
 }
 
-.footer .footer_content {
+.disclaimer .disclaimer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer .footer_content .footer_text {
+.disclaimer .disclaimer-content .disclaimer-text {
     display: flex;
     flex-direction: column; 
     gap: 8px; 
 }
 
-.footer .footer_content .footer_title {
+.disclaimer .disclaimer-content .disclaimer-title {
     font-size: 12px;
     font-weight: 800;
-    font-family: "DM Sans", sans-serif;
-    color: #fff;
+    color: var(--primary-color);
 }
 
-.footer .footer_content .footer_paragraph {
+.disclaimer .disclaimer-content .disclaimer-paragraph {
     font-size: 15px;
     font-weight: 500;
-    font-family: "DM Sans", sans-serif;
-    color: #fff;
+    color: var(--primary-color);
 }
 
-.footer .footer_content .sign_button {
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    color: #000;
-    border-radius: 25px;
+.disclaimer .disclaimer-content .sign-button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     font-size: 16px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
-    text-decoration: none;
-    text-transform: none;
     padding: 15px;
-    margin-right: 12px;
+    margin-right: 15px;
+    border-radius: 25px;
     border: 0;
-    width: 200px;
+    cursor: pointer;
 }

@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Imersão</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css">
+
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/vars.css">
+    <link rel="stylesheet" href="src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="src/styles/main-content.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" 
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div class="sidebar"> <!-- Estudar melhor sobre div e nav -->
-        <nav class="sidebar_navigation"> <!-- Nav serve para criar menus -->
+    <div class="sidebar">
+        <nav class="sidebar-navigation">
             <div class="logo">
                 <a href="">
-                    <img src="./assets/icons/logo-spotify.png" alt="Logo do Spotify">
+                    <img src="src/assets/icons/logo-spotify.png" alt="Logo do Spotify">
                 </a>
             </div>
                 <ul>
@@ -36,19 +43,19 @@
         </nav>
 
         <div class="library">
-            <div class="library_content">
-                <button class="library_button">
+            <div class="library-content">
+                <button class="library-button">
                     <span class="fa fas fa-book"></span>
                     <span>Sua biblioteca</span>
                 </button>
                 <span class="fa fa-plus"></span>
             </div>
 
-            <section class="section_playlist">
-                <div class="section_playlist_content">
+            <section class="section-playlist">
+                <div class="section-playlist-content">
                     <span class="text title">Crie sua primeira playlist</span>
                     <span class="text subtitle">É fácil, vamos te ajudar.</span>
-                    <button class="section_playlist_button">
+                    <button class="section-playlist-button">
                         <span>Criar playlist</span>
                     </button>
                 </div>
@@ -59,7 +66,7 @@
             </div>
 
             <div class="languages">
-                <button class="languages_button">
+                <button class="languages-button">
                     <span class="fa fa-globe"></span>
                     <span>Português do Brasil</span>
                 </button>
@@ -67,17 +74,48 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer_content">
-            <div class="footer_text">
-                <span class="footer_title">Testar o Premium de graça</span>
-                <span class="footer_paragraph">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</span>
+    <main>
+        <div class="main-container">
+            <nav class="header-navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="src/assets/icons/small-left.png" alt="Seta Esquerda">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="src/assets/icons/small-right.png" alt="Seta Esquerda">
+                    </button>
+
+                    <div class="header-search">
+                        <img src="src/assets/icons/search.png" alt="">
+                        <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+                    </div>
+
+                    <div class="header-login">
+                        <button class="subscribe">Inscreva-se</button>
+                        <button class="login">Entrar</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="main-page">
+                <div class="main-page-text">
+                    <span class="title">Boa tarde</span>
+                    <span class="subtitle">Navegar por todas as sessões</span>
+                </div>
             </div>
-            <button class="sign_button">
-                <span>Inscreva-se grátis</span>
-            </button>
         </div>
-    </div>
+    </main>
+
+    <footer class="disclaimer">
+        <div class="disclaimer-content">
+            <div class="disclaimer-text">
+                <span class="disclaimer-title">Testar o Premium de graça</span>
+                <span class="disclaimer-paragraph">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</span>
+            </div>
+            <button class="sign-button">Inscreva-se grátis</button>
+        </div>
+    </footer>
+        
 </body>
 
 </html>
